@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Release notes from the changelog
+        run: |
+          awk -v version="${GITHUB_REF_NAME#v}" '$0 ~ "^## " version " " {found = 1; next} /^## / {found = 0} found' CHANGELOG.md > notes.md
+          test -s notes.md
+      - name: Build universal binary
+        run: |
+          flags="-s -w -X main.version=${GITHUB_REF_NAME#v}"
+          GOARCH=arm64 go build -trimpath -ldflags="$flags" -o ucsignal-arm64 .
+          GOARCH=amd64 go build -trimpath -ldflags="$flags" -o ucsignal-amd64 .
+          lipo -create -output ucsignal ucsignal-arm64 ucsignal-amd64
+          codesign --sign - --force ucsignal
+          go run github.com/google/go-licenses/v2@v2.0.1 save . --save_path third_party_licenses --ignore github.com/marekp97/ucsignal
+          mkdir -p third_party_licenses/go && cp "$(go env GOROOT)/LICENSE" third_party_licenses/go/
+          tar -czf ucsignal-macos.tar.gz ucsignal LICENSE third_party_licenses
+          shasum -a 256 ucsignal-macos.tar.gz > ucsignal-macos.tar.gz.sha256
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" ucsignal-macos.tar.gz ucsignal-macos.tar.gz.sha256 --notes-file notes.md

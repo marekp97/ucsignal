@@ -1,0 +1,54 @@
+version: "2"
+
+linters:
+  default: standard
+  enable:
+    - copyloopvar
+    - dupword
+    - errname
+    - errorlint
+    - exhaustive
+    - gochecknoinits
+    - gocritic
+    - godot
+    - gosec
+    - intrange
+    - misspell
+    - modernize
+    - nilerr
+    - nolintlint
+    - predeclared
+    - revive
+    - thelper
+    - unconvert
+    - unparam
+    - usestdlibvars
+    - usetesting
+    - wastedassign
+    - whitespace
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+    gosec:
+      excludes:
+        # A command-line tool opens the files its user names and runs /usr/bin/log with its own arguments.
+        - G204
+        - G304
+  exclusions:
+    presets:
+      - std-error-handling
+    rules:
+      # The language files hold text in other languages, which the English spell checkers misread.
+      - path: internal/i18n/lang_
+        linters:
+          - dupword
+          - misspell
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/marekp97/ucsignal
