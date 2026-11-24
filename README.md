@@ -18,7 +18,7 @@ Paste this into Terminal:
 curl -fsSL https://raw.githubusercontent.com/marekp97/ucsignal/main/install.sh | sh
 ```
 
-It puts one file in `/usr/local/bin`; delete that file to uninstall. Homebrew and Go work too: `brew install marekp97/tap/ucsignal` or `go install github.com/marekp97/ucsignal@latest`.
+It puts one file in `/usr/local/bin`; delete that file to uninstall. With Go: `go install github.com/marekp97/ucsignal@latest`.
 
 ## Use
 
