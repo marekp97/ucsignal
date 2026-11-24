@@ -1,0 +1,42 @@
+
+ Universal Control · details  as heard by: recording                                                           20:11:14
+
+ Universal Control drops a device from its list when no reading of -61 dBm or stronger arrives from it for 120 s. A
+ reading of -57 dBm or stronger reliably brings it back.
+ Default thresholds, measured on macOS 27. The log has no decisions yet to check them against.
+
+ ╭─ iPad iPad16,3 · A0000002 ─────────────────────────────────────────────────────────────────────────────────────────╮
+ │ ● ON THE LIST                                                                                                      │
+ │ ███████████████████▌  117 s of 120 left before drop  ·  last reading ≥ -61: 2 s ago                                │
+ │ last 120 s: 16 of 18 readings ≥ -61, median -54 dBm                                                                │
+ │ last reading -60 dBm, 2 s ago                                                                                      │
+ │                                                                                                                    │
+ │                                                                                                               -35  │
+ │                            ⠰⠶⠶⣶⠶⡆     ⡶⡆        ⡶⡆                  ⢰⢶ ⢀⣀         ⢀⡀  ⣀⡀ ⢠⣤⡄                       │
+ │                             ⠅⠅⡿⠅⠛⢻⡶⢶⣀⣀⡇⣇⣀⡟⢷⣤⣤⡴⡆ ⡇⣧⡄⢀⣀⣰⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⣦⣤⠶⠶⡾⢽⣀⣸⠽⢶⣤⡴⠛⣧⣤⣼⠛⣇⣸⣇⣸⠛⠍⠷⠛⠋⠄⣿⠛⠛⢻⡟⠛⠷⠶⣦⣤ ⣶⣤⡴⠶⡆        │
+ │ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠅⠅⠅⠅⠅⠍⠅⠍⠍⠍⠅⠍⠍⠅⠅⠄⠅⠄⠛⠛⠅⠄⣧⡼⠍⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠄⠅⠅⠅⠍⠍⠅⠅⠅⠅⠄⠅⠄⠅⠋⠅⠍⠅⠍⠅⠅⠅⠅⠅⠅⠅⠋⠅⠅⠍⠅⠅⠅⠅⠄⠽⠶⠇⠄⠅⠅⡇ ⡟ -61  │
+ │                             ⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠄⠄⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠛⠛⠅ -75  │
+ │ 10 min ago                                                                                                now      │
+ │ no drops in the recording                                                                                          │
+ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ ╭─ MacBook Mac15,3 · A0000008 ───────────────────────────────────────────────────────────────────────────────────────╮
+ │ ● AT RISK  drops in 43 s unless a reading ≥ -61 arrives                                                            │
+ │ ███████▎░░░░░░░░░░░░  43 s of 120 left before drop  ·  last reading ≥ -61: 76 s ago                                │
+ │ last 120 s: 2 of 13 readings ≥ -61, median -65 dBm                                                                 │
+ │ last reading -62 dBm, 19 s ago                                                                                     │
+ │                                                                                                                    │
+ │                                                                                                               -35  │
+ │                                                                                                                    │
+ │                              ⢶⡼⠻⢶⣰⠛⠛⠛⣇⡶⡆ ⡶⠶⠶⠰⠞⣧⡴⠶⠶⠶⢠⣤⣿⣤⣤⡼⢻⡿⠶⠞⠛⢻ ⡶⠶⠶⠶⠶⢶  ⣀⣀⣀⡀                                       │
+ │ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁ ⠁⠅⠅⠅⠍⠅⠅⠅⠅⠍⠅⣧⣥⠇⠅⠅⠁⠅⠅⠄⠅⠅⠅ ⠍⠅⠅⠄⠅⠍⠅⠅⠅⠅⠽⠶⠇⠅⠅⠅⠅⠝⠛⠛⠍⠍⠍⠛⠛⣿⠛⠛⠛⠛⠛⠛⠛ ⠷⠶⠷⠘⠛⠛⠃ ⢹⠷⠷⣦⣥⣤⠁ ⠁ ⠁⡶⠷⠶⠁ -61  │
+ │                              ⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠄⠄⠅⠅⠅ ⠅⠅⠅⠅⠅⠅ ⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠟⠅⠅⠅⠅⠅⠅⠅ ⠅⠅⠅ ⠅⠅⠅⠰⠞⠅⠅⠄⠄⠄    ⠘⠅⠅⠅  -75  │
+ │ 10 min ago                                                                                                now      │
+ │ no drops in the recording                                                                                          │
+ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ Bar: median of the last 120 s and the margin to the -61 dBm threshold. Chart: strongest reading at each moment, dots
+ mark the threshold.
+ ■ strong  ■ borderline  ■ don't count
+ Each Mac hears differently, run the tool on the other one too.
+ Being on the list is necessary, not sufficient. If a device is on it and the pointer still won't cross, the cause is
+ not the signal.

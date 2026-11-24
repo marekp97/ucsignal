@@ -1,0 +1,19 @@
+
+ Universal Control  as heard by: recording                                                                     20:11:14
+
+ ╭─ iPad ─────────────────────────────────────────────────╮  ╭─ MacBook ──────────────────────────────────────────────╮
+ │ ● all good                                 good signal │  │ ● move closer, drops in about 43 s         weak signal │
+ │ ████████████▍░░░░░░░  -54 dBm  7 dB to spare           │  │ ████████░░░░░░░░░░░░  -65 dBm  4 dB short              │
+ │                                                        │  │                                                        │
+ │                                                   -35  │  │                                                   -35  │
+ │ ⣤⣤⡄  ⢠⣤⡄  ⣤⡄⢠⣤⣤⡴⢶⣀⣤⣤⡴⠶⢶⢠⣤⣤⣤⣤⣤⣤⣤⣤⣀⣀⣀    ⣀  ⢀⣀⣀⡀         │  │                                                        │
+ │ ⠄⠄⠟⠛⢿⡼⠄⠷⠶⠶⠇⠷⠞⠄⠄⠄⠍⠍⠄⠄⠄⠅⢽⡼⠄⠄⠄⠄⠟⠄⠄⠌⠍⠍⠝⠛⠟⣧⣤⠟⠟⠛⠏⠍⠍⡇⠄⢰⠶ -61  │  │ ⠄ ⢤⣤⣤⣤⣤⣤⡄⣤⣤⣤⣤⡄⠄⣤⣤⣤⣤⡄⢴⠶⠶⠶⠶ ⠄⢠⣤⣤⣤⣤⣄⣀⣄⣀⠄ ⠄ ⠄ ⠄⣤⣤⣤⣤⡄⠄ -61  │
+ │ ⠅⠅⠅⠅⠅⠄⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠄⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠅⠄⠄⠅⠅⠅⠅⠅⠅⠛⠛⠋⠅ -75  │  │  ⠰⠞⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠰⠇⠄⠄⠄⠄⠋⠅⠅⠅⠅ ⣤⡼⡿⠄⠄⠌⠍⠍⠍⠍       ⠄⠄⠄⠄⠄  -75  │
+ │ 3 min ago                                     now      │  │ 3 min ago                                     now      │
+ │ no drops in the recording                              │  │ no drops in the recording                              │
+ ╰────────────────────────────────────────────────────────╯  ╰────────────────────────────────────────────────────────╯
+
+ Bar: median of the last 120 s and the margin to the -61 dBm threshold. Chart: strongest reading at each moment, dots
+ mark the threshold.
+ ■ strong  ■ borderline  ■ don't count
+ Each Mac hears differently, run the tool on the other one too.
